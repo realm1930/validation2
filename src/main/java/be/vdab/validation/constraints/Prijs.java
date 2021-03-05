@@ -23,7 +23,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @PositiveOrZero
 @Digits(integer = 7,fraction = 2)
 public @interface Prijs {
-    String message() default "{be.vdab.Prijs.message}";
+    String  message() default "{be.vdab.Prijs.message}";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
