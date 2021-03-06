@@ -51,4 +51,11 @@ class ProductTest {
         assertThat(validator.validate(product)).isNotEmpty();
     }
 
+    @Test
+    void aankoopPrijs10EnVerkoopPrijs1IsVerkeerd() {
+        product.setAankoopPrijs(BigDecimal.TEN);
+        product.setVerkoopPrijs(BigDecimal.ONE);
+        assertThat(validator.validate(product)).isNotEmpty();
+    }
+
 }

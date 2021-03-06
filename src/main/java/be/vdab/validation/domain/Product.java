@@ -1,6 +1,7 @@
 package be.vdab.validation.domain;
 
 import be.vdab.validation.constraints.Prijs;
+import be.vdab.validation.constraints.VerkoopPrijsAankoopPrijs;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.PositiveOrZero;
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
  * @version 1.0
  */
 
+@VerkoopPrijsAankoopPrijs
 public class Product {
     @Prijs
     private BigDecimal aankoopPrijs;
