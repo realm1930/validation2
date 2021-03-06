@@ -19,9 +19,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({METHOD,FIELD,ANNOTATION_TYPE})
 @Retention(RUNTIME)
-@Constraint(validatedBy={})
-@PositiveOrZero
-@Digits(integer = 7,fraction = 2)
+@Constraint(validatedBy={PrijsValidator.class})
 public @interface Prijs {
     String  message() default "{be.vdab.Prijs.message}";
     Class<?>[] groups() default {};
